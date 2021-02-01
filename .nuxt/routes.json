@@ -3,54 +3,63 @@
     "name": "About",
     "path": "/About",
     "component": "/Users/ekaterinamaneeva/Documents/dom-nuxtjs2/pages/About.vue",
-    "chunkName": "pages/About"
+    "chunkName": "pages/About",
+    "_name": "_3b5292e2"
   },
   {
     "name": "Calculator",
     "path": "/Calculator",
     "component": "/Users/ekaterinamaneeva/Documents/dom-nuxtjs2/pages/Calculator.vue",
-    "chunkName": "pages/Calculator"
+    "chunkName": "pages/Calculator",
+    "_name": "_296a1ff0"
   },
   {
     "name": "Company",
     "path": "/Company",
     "component": "/Users/ekaterinamaneeva/Documents/dom-nuxtjs2/pages/Company.vue",
-    "chunkName": "pages/Company"
+    "chunkName": "pages/Company",
+    "_name": "_ed7a7602"
   },
   {
     "name": "Equipment",
     "path": "/Equipment",
     "component": "/Users/ekaterinamaneeva/Documents/dom-nuxtjs2/pages/Equipment.vue",
-    "chunkName": "pages/Equipment"
+    "chunkName": "pages/Equipment",
+    "_name": "_875de9e0"
   },
   {
     "name": "Features",
     "path": "/Features",
     "component": "/Users/ekaterinamaneeva/Documents/dom-nuxtjs2/pages/Features.vue",
-    "chunkName": "pages/Features"
+    "chunkName": "pages/Features",
+    "_name": "_d4d13daa"
   },
   {
     "name": "Index1",
     "path": "/Index1",
     "component": "/Users/ekaterinamaneeva/Documents/dom-nuxtjs2/pages/Index1.vue",
-    "chunkName": "pages/Index1"
+    "chunkName": "pages/Index1",
+    "_name": "_3fcd2b0d"
   },
   {
     "name": "Steps",
     "path": "/Steps",
     "component": "/Users/ekaterinamaneeva/Documents/dom-nuxtjs2/pages/Steps.vue",
-    "chunkName": "pages/Steps"
+    "chunkName": "pages/Steps",
+    "_name": "_f931edae"
   },
   {
     "name": "Systems",
     "path": "/Systems",
     "component": "/Users/ekaterinamaneeva/Documents/dom-nuxtjs2/pages/Systems.vue",
-    "chunkName": "pages/Systems"
+    "chunkName": "pages/Systems",
+    "_name": "_4d1b3126"
   },
   {
     "name": "index",
     "path": "/",
     "component": "/Users/ekaterinamaneeva/Documents/dom-nuxtjs2/pages/index.vue",
-    "chunkName": "pages/index"
+    "chunkName": "pages/index",
+    "_name": "_eac71d18"
   }
 ]

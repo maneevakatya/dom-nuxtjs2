@@ -11,7 +11,7 @@
 		w vw(500)
 		ml vw(50)
 		overflow visible!important
-		^[0][loaded] &
+		&[visible]
 			.smarthome1_svg
 				&__elem
 					opacity 1
@@ -25,7 +25,7 @@
 		opacity 0
 		transform translateX(vw(50))
 		transition 0.5s opacity, 0.5s transform
-		^[0][loaded] &
+		&[visible]
 			opacity 1
 			transform translateX(0)
 	&__subtitle
@@ -37,7 +37,7 @@
 		transform translateX(vw(50))
 		transition 0.5s opacity, 0.5s transform
 		transition-delay 0.2s
-		^[0][loaded] &
+		&[visible]
 			opacity 1
 			transform translateX(0)
 	&__text
@@ -63,7 +63,7 @@
 		// 	transition-delay 0.8s
 		// &:nth-child(4)
 		// 	transition-delay 1s
-		^[0][loaded] &
+		&[visible]
 			opacity 1
 			transform translateY(0)
 	&__btn
@@ -74,7 +74,7 @@
 		opacity 0
 		transition 0.5s opacity
 		transition-delay 2s
-		^[0][loaded] &
+		&[visible]
 			opacity 1
 	&__link
 		font-size vw(25)
