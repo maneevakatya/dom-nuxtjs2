@@ -1,0 +1,20 @@
+{
+  "Logo": {
+    "description": "Auto imported from components/Logo.vue"
+  },
+  "LazyLogo": {
+    "description": "Auto imported from components/Logo.vue"
+  },
+  "Footer": {
+    "description": "Auto imported from components/layout/Footer.vue"
+  },
+  "LazyFooter": {
+    "description": "Auto imported from components/layout/Footer.vue"
+  },
+  "Header": {
+    "description": "Auto imported from components/layout/Header.vue"
+  },
+  "LazyHeader": {
+    "description": "Auto imported from components/layout/Header.vue"
+  }
+}

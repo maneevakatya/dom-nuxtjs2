@@ -7,24 +7,32 @@
 			nav.nav
 				ul.nav__list
 					li.nav__item
-						<NuxtLink  to="/about" class="nav__link" :class="{ 'nav__link--active': page === 'About' || page === 'Equipment' }"> Умный дом</NuxtLink>
+						a.nav__link(@click="scroll('.about')" :class="{ 'nav__link--active': page === 'About' || page === 'Equipment' }" ) Умный дом
 					li.nav__item
-						<NuxtLink  to="/systems" class="nav__link" :class="{ 'nav__link--active': page === 'Systems' }">Системы</NuxtLink>
+						a.nav__link(@click="scroll('.systems')" :class="{ 'nav__link--active': page === 'Systems' }" ) Системы
 					li.nav__item
-						<NuxtLink  to="/features" class="nav__link" :class="{ 'nav__link--active': page === 'Company' || page === 'Features' }">О нас</NuxtLink>
+						a.nav__link(:class="{ 'nav__link--active': page === 'Company' || page === 'Features' }" ) О нас
 					li.nav__item
-						<NuxtLink  to="/calculator" class="nav__link" :class="{ 'nav__link--active': page === 'Calculator' }">Стоимость</NuxtLink>
+						a.nav__link(:class="{ 'nav__link--active': page === 'Calculator' }") Стоимость
 			a(href="tel: +7 912 939 19 75").header__phone +7 912 939 19 75
 			button.header__btn.btn Заказать
 
 </template>
 
 <script>
+import { qs, scrollTo } from "@/helpers/index"
+
 export default {
 	computed: {
 		page() {
 			return this.$route.name !== undefined ? this.$route.name : this.$route
 		},
 	},
+	methods:{
+		scroll(to){
+			if(scrollTo(qs(to)))
+				scrollTo(qs(to, 0, 'linear'))
+		}
+	}
 }
 </script>

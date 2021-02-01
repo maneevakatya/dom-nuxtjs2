@@ -3,14 +3,14 @@
 	h 100vh
 	position relative
 	oh()
-	&[loaded]:before
+	&[visible]:before
 		w 100%
-	&[loaded]:after
+	&[visible]:after
 		opacity 0.3
 	&:before
 		content ''
 		position absolute
-		w 50%
+		w 0%
 		h 100%
 		transition 0.8s width
 		bgc $blue
@@ -48,7 +48,7 @@
 		transition 0.6s opacity, 0.6s transform
 		transform translateX(vw(160))
 		transition-delay 0.4s
-		^[0][loaded] &
+		&[visible]
 			opacity 1
 			transform translateX(0)
 	&__swiper
@@ -58,7 +58,7 @@
 		transition 0.6s opacity, 0.6s transform
 		transition-delay 0.4s
 		transform translateY(vw(60))
-		^[0][loaded] &
+		&[visible]
 			opacity 1
 			transform translateY(0)
 		.swiper-pagination
@@ -103,7 +103,7 @@
 		transition 0.6s opacity, 0.6s transform
 		transition-delay 0.4s
 		transform translateX(vw(60))
-		^[0][loaded] &
+		&[visible]
 			opacity 1
 			transform translateX(0)
 		&.swiper-container

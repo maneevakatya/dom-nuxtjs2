@@ -18,7 +18,6 @@ export default {
     About,
     Equipment,
     Systems
-
   }
 }
 </script>

@@ -45,7 +45,7 @@
 			bgc $blue
 			transition-delay 0.6s
 
-		^[0][loaded] &
+		&[visible]
 			opacity 1
 			transform translateX(0)
 
@@ -58,7 +58,7 @@
 		opacity 0
 		transition 0.6s opacity, 0.6s transform
 		transform translateX(vw(-60)) rotateY(-180deg)
-		^[0][loaded] &
+		&[visible]
 			opacity 1
 			transform translateX(-75%) rotateY(-180deg)
 	&__link

@@ -32,9 +32,9 @@ export default {
 		setTimeout(() => {
 			document.querySelector('.features').setAttribute('loaded', true)
 		}, 100)
-		setTimeout(() => {
-			window.addEventListener('wheel', this.scrollHandler)
-		}, 1000)
+		// setTimeout(() => {
+		// 	window.addEventListener('wheel', this.scrollHandler)
+		// }, 1000)
 	},
 	methods: {
 		scrollHandler(e) {

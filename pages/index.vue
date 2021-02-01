@@ -1,8 +1,9 @@
 <template lang="pug">
 	.index
+		span.index__shadow
 		.wrapper
 			.index__content
-				h1.index__title
+				h1.index__title.h-anim
 					b Умный
 					br
 					|
@@ -16,6 +17,8 @@
 	</template>
 
 <script>
+
+
 export default {
 	computed: {
 		key() {
@@ -28,9 +31,9 @@ export default {
 		setTimeout(() => {
 			document.querySelector('.index').setAttribute('loaded', true)
 		}, 200)
-		setTimeout(() => {
-			window.addEventListener('wheel', this.scrollHandler)
-		}, 1000)
+		// setTimeout(() => {
+		// 	window.addEventListener('wheel', this.scrollHandler)
+		// }, 1000)
 	},
 	methods: {
 		scrollHandler(e) {

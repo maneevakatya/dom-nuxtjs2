@@ -1,10 +1,10 @@
 <template lang="pug">
-	section.equipment
+	section.equipment.h-anim
 		.wrapper
 			.equipment__illustrations
-				<Man class="equipment__img"/>
+				<Man class="equipment__img h-anim"/>
 			.equipment__content
-				.swiper-container.equipment__swiper(v-swiper:firstSwiper="firstSwiperOptions" ref="firstSwiper" )
+				.swiper-container.equipment__swiper.h-anim(v-swiper:firstSwiper="firstSwiperOptions" ref="firstSwiper" )
 					.swiper-wrapper
 						.swiper-slide.equipment__slide
 							.equipment__item
@@ -39,7 +39,7 @@
 					.swiper-button-next
 					.swiper-button-prev
 					.swiper-pagination
-				.swiper-container.equipment__swiperImgs(v-swiper:secondSwiper='secondSwiperOptions' ref="secondSwiper" @slideChangeTransitionStart='slideChangeTransitionStart($refs.secondSwiper.swiper)' @slideChangeTransitionEnd='slideChangeTransitionEnd($refs.secondSwiper.swiper)')
+				.swiper-container.equipment__swiperImgs.h-anim(v-swiper:secondSwiper='secondSwiperOptions' ref="secondSwiper" @slideChangeTransitionStart='slideChangeTransitionStart($refs.secondSwiper.swiper)' @slideChangeTransitionEnd='slideChangeTransitionEnd($refs.secondSwiper.swiper)')
 					.swiper-wrapper
 						.swiper-slide
 							img.equipment__elem-img(src="../assets/img/temp.png")
@@ -54,6 +54,7 @@
 </template>
 
 <script>
+import { elemVisCheck } from '@/helpers/index'
 import Man from '@/assets/svg/man3.svg'
 export default {
 	components: {
@@ -91,13 +92,18 @@ export default {
 		setTimeout(() => {
 			document.querySelector('.equipment').setAttribute('loaded', true)
 		}, 100)
+		window.addEventListener('scroll', this.pageScroll)
+		elemVisCheck()
 		setTimeout(() => {
-			window.addEventListener('wheel', this.scrollHandler)
+			// window.addEventListener('wheel', this.scrollHandler)
 			this.$refs.firstSwiper.swiper.controller.control = this.$refs.secondSwiper.swiper
 			this.$refs.secondSwiper.swiper.controller.control = this.$refs.firstSwiper.swiper
 		}, 1000)
 	},
 	methods: {
+		pageScroll() {
+			setTimeout(() => elemVisCheck(), 600)
+		},
 		scrollHandler(e) {
 			if (
 				window.pageYOffset + window.innerHeight ===

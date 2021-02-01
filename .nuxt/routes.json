@@ -1,0 +1,56 @@
+[
+  {
+    "name": "About",
+    "path": "/About",
+    "component": "/Users/ekaterinamaneeva/Documents/dom-nuxtjs2/pages/About.vue",
+    "chunkName": "pages/About"
+  },
+  {
+    "name": "Calculator",
+    "path": "/Calculator",
+    "component": "/Users/ekaterinamaneeva/Documents/dom-nuxtjs2/pages/Calculator.vue",
+    "chunkName": "pages/Calculator"
+  },
+  {
+    "name": "Company",
+    "path": "/Company",
+    "component": "/Users/ekaterinamaneeva/Documents/dom-nuxtjs2/pages/Company.vue",
+    "chunkName": "pages/Company"
+  },
+  {
+    "name": "Equipment",
+    "path": "/Equipment",
+    "component": "/Users/ekaterinamaneeva/Documents/dom-nuxtjs2/pages/Equipment.vue",
+    "chunkName": "pages/Equipment"
+  },
+  {
+    "name": "Features",
+    "path": "/Features",
+    "component": "/Users/ekaterinamaneeva/Documents/dom-nuxtjs2/pages/Features.vue",
+    "chunkName": "pages/Features"
+  },
+  {
+    "name": "Index1",
+    "path": "/Index1",
+    "component": "/Users/ekaterinamaneeva/Documents/dom-nuxtjs2/pages/Index1.vue",
+    "chunkName": "pages/Index1"
+  },
+  {
+    "name": "Steps",
+    "path": "/Steps",
+    "component": "/Users/ekaterinamaneeva/Documents/dom-nuxtjs2/pages/Steps.vue",
+    "chunkName": "pages/Steps"
+  },
+  {
+    "name": "Systems",
+    "path": "/Systems",
+    "component": "/Users/ekaterinamaneeva/Documents/dom-nuxtjs2/pages/Systems.vue",
+    "chunkName": "pages/Systems"
+  },
+  {
+    "name": "index",
+    "path": "/",
+    "component": "/Users/ekaterinamaneeva/Documents/dom-nuxtjs2/pages/index.vue",
+    "chunkName": "pages/index"
+  }
+]

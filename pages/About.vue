@@ -1,11 +1,11 @@
 <template lang="pug">
 	section.about
 		.about__illustrations
-			<Man class="about__img"/>
+			<Man class="about__img h-anim"/>
 			//- img(src="../assets/svg/man.png").about__img
 		.about__blocks
-			.about__block
-				p.about__title
+			.about__block.h-anim
+				p.about__title.h-anim
 					b Умный дом -
 					br
 					|  не только
@@ -13,8 +13,8 @@
 					| управление светом
 					br
 					| с телефона
-				<NuxtLink to="/equipment" class="about__link btn">Разобраться в умном доме</NuxtLink>
-			.about__block.about__block--blue
+				<NuxtLink to="/equipment" class="about__link btn h-anim">Разобраться в умном доме</NuxtLink>
+			.about__block.about__block--blue.h-anim
 				p.about__title
 					b Умный дом -
 					br
@@ -22,6 +22,7 @@
 </template>
 
 <script>
+import { elemVisCheck } from '@/helpers/index'
 import Man from '@/assets/svg/man3.svg'
 
 export default {
@@ -32,11 +33,16 @@ export default {
 		setTimeout(() => {
 			document.querySelector('.about').setAttribute('loaded', true)
 		}, 200)
-		setTimeout(() => {
-			window.addEventListener('wheel', this.scrollHandler)
-		}, 1000)
+		window.addEventListener('scroll', this.pageScroll)
+		elemVisCheck()
+		// setTimeout(() => {
+		// 	window.addEventListener('wheel', this.scrollHandler)
+		// }, 1000)
 	},
 	methods: {
+		pageScroll() {
+			setTimeout(() => elemVisCheck(), 600)
+		},
 		scrollHandler(e) {
 			if (
 				window.pageYOffset + window.innerHeight ===
