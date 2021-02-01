@@ -1,0 +1,73 @@
+.about
+	h 100vh
+	position relative
+	.wrapper
+		h 100%
+	
+	&__title
+		color $black
+		font-size vw(40)
+		line-height 1
+		mb vw(50)
+		pl vw(20)
+		b
+			font-weight 600
+			color $blue
+		^[0]__block--blue &
+			color $white
+			font-size vw(40)
+			mb 0
+			b
+				color $white
+				font-size vw(90)
+				display inline-block
+				mb vw(20)
+				line-height 1
+
+	&__content
+		df(center,)
+		h 100%
+	&__blocks
+		df()
+		h 100%
+	&__block
+		w 50%
+		h 100%
+		padding vw(50)
+		pl vw(70)
+		dfv(, center)
+		opacity 0
+		transform translateX(vw(50))
+		transition 0.6s opacity, 0.6s transform, 0.6s background-color
+
+		&--blue
+			pl vw(100)
+			bgc $blue
+			transition-delay 0.6s
+
+		^[0][loaded] &
+			opacity 1
+			transform translateX(0)
+
+	&__img
+		position absolute
+		z-index 9
+		w vw(300)
+		b vw(20)
+		left 50%
+		opacity 0
+		transition 0.6s opacity, 0.6s transform
+		transform translateX(vw(-60)) rotateY(-180deg)
+		^[0][loaded] &
+			opacity 1
+			transform translateX(-75%) rotateY(-180deg)
+	&__link
+		font-size vw(25)
+		font-weight 600
+		color $white
+		bgc $orange
+		padding 0 vw(20)
+		display inline-block
+		border-radius vw(40)
+		h vw(70)
+		line-height vw(70)

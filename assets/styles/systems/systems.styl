@@ -1,0 +1,167 @@
+.systems
+	h 100vh
+	position relative
+	&[loaded]:before
+		w 50%
+	&:before
+		content ''
+		position absolute
+		z-index -1
+		w 0
+		h 100%
+		bgc #f1f1f1
+		bgc #f9faff
+		l 0
+		t 0
+		transition 1s width
+	.wrapper
+		h 100%
+		w 100%
+		dfv(, center)
+	&__content
+		w 100%
+		df(center, space-between)
+	&__picture
+		margin 0 auto
+		flex-shrink 0
+		w vw(500)
+		align-self center
+	&__btn
+		position absolute
+		left vw(50)
+		b 15%
+		opacity 0
+		transition 0.5s opacity
+		transition-delay 2s
+		^[0][loaded] &
+			opacity 1
+	&__link
+		font-size vw(25)
+		line-height 1
+		bgc $orange
+		color $white
+		display inline-block
+		padding vw(20) vw(30)
+		cursor pointer
+		will-change transform
+		box-shadow 0 0 15px $orange
+		&:hover
+			bgc $orange-light
+			transform scale(1.05)
+	&__img
+		w 100%
+		overflow visible!important
+		^[0][loaded] &
+			.smarthome2_svg
+				&__elem
+					opacity 1
+					transform translate(0)
+	&__title
+		font-size vw(35)
+		font-weight 600
+		line-height 1
+		color #2f2f31
+		mb vw(40)
+		opacity 0
+		transform translateX(vw(-100))
+		transition 0.5s opacity, 0.5s transform
+		transition-delay 0.4s
+		^[0][loaded] &
+			opacity 1
+			transform translate(0)
+	&__list
+		w vw(370)
+		opacity 0
+		transition 0.5s opacity, 0.5s transform
+		transition-delay 0.6s
+		^[0][loaded] &
+			opacity 1
+			transform translate(0)
+		&--left
+			mb vw(50)
+			transform translateX(vw(-100))
+			& ^[0]__item
+				font-size vw(22)
+				line-height 1.1
+				color #2f2f31
+				position relative
+				pl vw(40)
+				&:before
+					content ''
+					position absolute
+					w vw(8)
+					h vw(8)
+					bgc #2f2f31
+					border-radius 50%
+					l vw(10)
+					t vw(10)
+				&:not(:last-child)
+					mb vw(15)
+		&--right
+			transform translateX(vw(100))
+			& ^[0]__item
+				text-align left
+				pl vw(40)
+				color $black
+				position relative
+				mb vw(5)
+				line-height 1
+				&:before
+					content ''
+					position absolute
+					w vw(8)
+					h vw(8)
+					bgc $orange
+					border-radius 50%
+					l vw(10)
+					t vw(10)
+				&:first-child
+					mb vw(20)
+					pl 0
+					font-size vw(30)
+					font-weight 800
+					color $orange
+					&:before
+						content none
+	&__item
+		font-size vw(22)
+		&:not(:last-child)
+			mb vw(10)
+		p
+			mt vw(7)
+			font-size vw(18)
+	.smarthome2_svg
+		&__elem
+			opacity 0
+			transition 0.5s opacity, 0.5s transform
+		&__people,
+		&__sofa
+			transform translateY(vw(-50))
+		&__people
+			transition-delay 0.6s
+		&__smart_watch
+			transform translateY(vw(50))
+		&__smart_watch2
+			transform translateY(vw(-20))
+			transition-delay 2s
+		&__camera
+			transform translateX(vw(-50)) translateZ(vw(-50))
+			transition-delay 1s
+		&__sensor
+			transition-delay 1s
+			transform translateY(vw(-50))
+		&__sensor2
+			transition-delay 1s
+			transform translateX(vw(50))
+		&__air
+			transition-delay 1s
+			transform translateY(vw(-50))
+		&__smartphone
+			transition-delay 1s
+			transform translateY(vw(50))
+		&__lock
+			transition-delay 1s
+			transform translateX(vw(50))
+		&__smart_robot
+			transition-delay 1.5s
+			transform translateY(vw(-30))

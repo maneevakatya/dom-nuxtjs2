@@ -1,0 +1,31 @@
+.footer
+	position absolute
+	z-index 4
+	w 100%
+	l 0
+	b vw(20)
+	text-align center
+	opacity 0
+	transform translateY(vw(-50))
+	transition 0.4s opacity, 0.4s transform
+	transition-delay 0.8s
+	/main[loaded] &
+		opacity 1
+		transform translateY(0)
+	&--index
+		pl vw(130)
+		text-align left
+	&__arrow
+		w vw(12)
+		animation arrow 1s infinite linear
+		path
+			fill $orange
+
+
+@keyframes arrow
+	0%
+		transform translateY(-20%)
+	50%
+		transform translateY(0)
+	100%
+		transform translateY(-20%)

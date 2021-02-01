@@ -1,0 +1,130 @@
+.features
+	h 100vh
+	bgc #f9faff
+	.wrapper
+		h 100%
+		dfv(, center)
+	&__content
+		df(center, )
+		position relative
+	&__img
+		w vw(500)
+		ml vw(50)
+		overflow visible!important
+		^[0][loaded] &
+			.smarthome1_svg
+				&__elem
+					opacity 1
+					transform translate(0)
+	&__title
+		font-size vw(40)
+		line-height vw(43)
+		color $blue
+		font-weight 600
+		mb vw(20)
+		opacity 0
+		transform translateX(vw(50))
+		transition 0.5s opacity, 0.5s transform
+		^[0][loaded] &
+			opacity 1
+			transform translateX(0)
+	&__subtitle
+		font-size vw(25)
+		font-weight 600
+		color $orange
+		mb vw(40)
+		opacity 0
+		transform translateX(vw(50))
+		transition 0.5s opacity, 0.5s transform
+		transition-delay 0.2s
+		^[0][loaded] &
+			opacity 1
+			transform translateX(0)
+	&__text
+		w 50%
+	&__list
+		df(, space-between)
+		w 80%
+		flex-wrap wrap
+		mb vw(30)
+	&__item
+		w vw(250)
+		mb vw(30)
+		font-size vw(18)
+		opacity 0
+		transform translateY(vw(50))
+		transition 0.5s opacity, 0.5s transform
+		transition-delay 0.4s
+		// &:nth-child(1)
+		// 	transition-delay 0.4s
+		// &:nth-child(2)
+		// 	transition-delay 0.6s
+		// &:nth-child(3)
+		// 	transition-delay 0.8s
+		// &:nth-child(4)
+		// 	transition-delay 1s
+		^[0][loaded] &
+			opacity 1
+			transform translateY(0)
+	&__btn
+		position absolute
+		left 50%
+		b 20%
+		transform translateX(-50%)
+		opacity 0
+		transition 0.5s opacity
+		transition-delay 2s
+		^[0][loaded] &
+			opacity 1
+	&__link
+		font-size vw(25)
+		line-height 1
+		bgc $orange
+		color $white
+		display inline-block
+		padding vw(10) vw(30)
+		cursor pointer
+		will-change transform
+		&:hover
+			bgc $orange-light
+			transform scale(1.05)
+
+	.smarthome1_svg
+		&__elem
+			opacity 0
+			transition 0.5s opacity, 0.5s transform
+		&__smartphone
+			transition-delay 0.2s
+			transform translateY(vw(50))
+		&__smart_watch
+			transition-delay 0.4s
+			transform translateY(vw(-30))
+		&__people,
+		&__sofa
+			transform translateY(vw(-50))
+		&__people
+			transition-delay 0.6s
+		&__heating
+			transition-delay 1.5s
+			transform translateX(vw(50))
+		&__light
+			transition-delay 1.7s
+			transform translateX(vw(50))
+		&__socket
+			transform translateY(vw(-20))
+			transition-delay 2s
+		&__microwave
+			transform translateY(vw(-50))
+			transition-delay 1.2s
+		&__coffee
+			transform translateY(vw(-30))
+			transition-delay 1.4s
+		&__washing_machine
+			transition-delay 1.5s
+			transform translateX(vw(-50))
+		&__air
+			transition-delay 1.5s
+			transform translateY(vw(-50))
+		&__table
+			transition-delay 0.8s
+			transform translateY(vw(-50))

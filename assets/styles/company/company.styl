@@ -1,0 +1,80 @@
+.company
+	h 100vh
+	position relative
+	&[loaded]:before
+		h 100%
+	&[loaded]:after
+		w 50%
+	&:before
+		content ''
+		position absolute
+		w 100%
+		h 0
+		l 0
+		b 0
+		bgc #f9faff
+		transition 0.8s height
+	&:after
+		content ''
+		position absolute
+		w 0
+		h 100%
+		l 0
+		b 0
+		bgc $blue
+		transition 0.8s width
+	.wrapper
+		h 100%
+		df(center,)
+		position relative
+		z-index 2
+	&__content
+		w 100%
+		h 100%
+		df(center, space-between)
+	&__img
+		w vw(450)
+	&__title
+		font-size vw(150)
+		line-height vw(100)
+		font-weight 800
+		color $white
+		flex-shrink 0
+		display inline-block
+		mb vw(80)
+		mr vw(100)
+		opacity 0
+		transform translateY(vw(50))
+		transition 0.4s opacity, 0.4s transform
+		transition-delay 0.4s
+		&:before
+			content: ''
+			position absolute
+			w 100%
+			h 30px
+			bgc $orange
+			l 0
+			b -3px
+			z-index -1
+		^[0][loaded] &
+			opacity 1
+			transform translateY(0)
+	&__list
+		w 50%
+		pl vw(70)
+		df(unset,)
+		flex-wrap wrap
+		opacity 0
+		transform translateY(vw(50))
+		transition 0.4s opacity, 0.4s transform
+		transition-delay 0.6s
+		^[0][loaded] &
+			opacity 1
+			transform translateY(0)
+	&__item
+		w vw(250)
+		mb vw(50)
+		font-size vw(25)
+		color #2f2f31
+		&:nth-child(2n-1)
+			mr vw(50)

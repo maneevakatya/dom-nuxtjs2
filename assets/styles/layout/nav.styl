@@ -1,0 +1,22 @@
+.nav
+	&__list
+		df()
+	&__item
+		&:not(:last-child)
+			mr vw(50)
+	&__link
+		color $blue
+		font-size vw(20)
+		font-weight 500
+		transition 0.4s color
+		/.header--equipment &,
+		/.header--company &
+			color $white
+			&--active
+				color $blue
+				border-color $blue
+		&--active
+			color $orange
+			border-bottom 1px solid $orange
+		&:hover
+			color $orange

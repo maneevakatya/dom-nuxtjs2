@@ -1,0 +1,147 @@
+.equipment
+	pl vw(350)
+	h 100vh
+	position relative
+	oh()
+	&[loaded]:before
+		w 100%
+	&[loaded]:after
+		opacity 0.3
+	&:before
+		content ''
+		position absolute
+		w 50%
+		h 100%
+		transition 0.8s width
+		bgc $blue
+		r 0
+		t 0
+	&:after
+		content ''
+		position absolute
+		// z-index 4
+		opacity 0
+		w 100%
+		h 100%
+		t 0
+		r 0
+		transition 0.8s opacity
+		transition-delay 0.4s
+		background-image url(../../assets/img/bg.jpeg)
+		background-size cover
+		background-repeat no-repeat
+		background-position center top
+
+	.wrapper
+		h 100%
+		df(center, )
+	&__content
+		w 100%
+		df(center, space-between)
+	&__img
+		position absolute
+		z-index 9
+		w vw(300)
+		b vw(20)
+		left vw(50)
+		opacity 0
+		transition 0.6s opacity, 0.6s transform
+		transform translateX(vw(160))
+		transition-delay 0.4s
+		^[0][loaded] &
+			opacity 1
+			transform translateX(0)
+	&__swiper
+		position relative
+		w vw(400)
+		opacity 0
+		transition 0.6s opacity, 0.6s transform
+		transition-delay 0.4s
+		transform translateY(vw(60))
+		^[0][loaded] &
+			opacity 1
+			transform translateY(0)
+		.swiper-pagination
+			bottom auto!important
+			t vw(10)
+			w auto
+			text-align left
+			color $white
+			font-weight 800
+		&.swiper-container
+				pt vw(50)
+				overflow visible
+			.swiper-slide
+				h auto!important
+				.equipment__item
+					opacity 0
+					transition 0.3s opacity
+				&-active
+					.equipment__item
+						opacity 1
+			.swiper-button-next,
+			.swiper-button-prev
+				w vw(50)
+				h vw(50)
+				top vw(10)
+				b auto
+				background-image none
+				border-radius 50%
+				background-size 70%
+				background-image url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='iso-8859-1'%3F%3E%3C!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E%3Csvg version='1.1' id='Capa_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 512 512' style='enable-background:new 0 0 512 512;' xml:space='preserve'%3E%3Cg%3E%3Cg%3E%3Cpath fill='%23fa9012' d='M506.134,241.843c-0.006-0.006-0.011-0.013-0.018-0.019l-104.504-104c-7.829-7.791-20.492-7.762-28.285,0.068 c-7.792,7.829-7.762,20.492,0.067,28.284L443.558,236H20c-11.046,0-20,8.954-20,20c0,11.046,8.954,20,20,20h423.557 l-70.162,69.824c-7.829,7.792-7.859,20.455-0.067,28.284c7.793,7.831,20.457,7.858,28.285,0.068l104.504-104 c0.006-0.006,0.011-0.013,0.018-0.019C513.968,262.339,513.943,249.635,506.134,241.843z'/%3E%3C/g%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3C/svg%3E%0A")
+
+			.swiper-button-prev
+				l vw(70)
+				transform rotate(180deg)
+			.swiper-button-next
+				r auto
+				l vw(140)
+	&__swiperImgs
+		w vw(400)
+		h vw(400)
+		opacity 0
+		transition 0.6s opacity, 0.6s transform
+		transition-delay 0.4s
+		transform translateX(vw(60))
+		^[0][loaded] &
+			opacity 1
+			transform translateX(0)
+		&.swiper-container
+			overflow visible
+		.swiper-slide
+			opacity 0.3
+			transition 0.5s opacity
+			bgc $white
+			border-radius 50%
+			overflow hidden
+			&-active
+				opacity 1
+	// &__slide
+	&__elem-img
+		w 100%
+	&__item
+		h 100%
+		dfv(, center)
+		font-size vw(18)
+		&:not(:last-child)
+			mb vw(20)
+	&__title
+		font-size vw(50)
+		line-height 1
+		color $white
+		font-weight 800
+		mb vw(20)
+	&__item
+		color $white
+	&__link
+		mb vw(30)
+		ml vw(5)
+		padding vw(10) vw(20)
+		border-radius vw(30)
+		color $white
+		// border 2px solid $orange
+		bgc $orange
+		cursor pointer
+		transition 0.4s background-color
+		&:hover
+			bgc $orange-light

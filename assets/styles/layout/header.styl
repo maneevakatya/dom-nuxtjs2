@@ -1,0 +1,60 @@
+.header
+	position absolute
+	z-index 5
+	w 100%
+	l 0
+	t 0
+	pt vw(30)
+	opacity 0
+	transform translateY(vw(-50))
+	transition 0.4s opacity, 0.4s transform
+	transition-delay 0.8s
+	/main[loaded] &
+		opacity 1
+		transform translateY(0)
+	.wrapper
+		df(center, )
+	&__logo
+		w vw(50)
+		mr vw(50)
+		path
+			fill $blue
+			transition 0.5s fill
+			^[0]--equipment &,
+			^[0]--company &
+				fill $white
+		&--active
+			path
+				fill $orange
+		&:hover
+			path
+				fill $orange
+
+	&__phone
+		ml auto
+		color $white
+		font-size vw(20)
+		font-weight 600
+		^[0]--systems &,
+		^[0]--features &,
+		^[0]--company &
+			color $blue
+	&__btn
+		ml vw(50)
+		bgc $blue
+		color $white
+		font-size vw(30)
+		line-height vw(50)
+		h vw(50)
+		padding 0 vw(30)
+		border-radius vw(30)
+		df(center, center)
+		&:hover
+			bgc rgba(37,73,186,1)
+		^[0]--about &
+			bgc rgba(37,73,186,1)
+			color $white
+		^[0]--equipment &,
+		^[0]--company &
+			bgc $orange
+
